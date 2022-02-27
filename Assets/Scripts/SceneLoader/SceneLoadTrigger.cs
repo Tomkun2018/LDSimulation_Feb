@@ -21,6 +21,7 @@ public class SceneLoadTrigger : MonoBehaviour
             return;
         }
         //Debug.Log(currenPressed);
+
         LoadingData.sceneToLoad = presceneName + currenPressed.Substring(5);
         SceneManager.LoadScene("LoadingScene");
     }

@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TomScene.unity
     guid: 1ada9f2c17ed6dc439ebc110c82ef8f0
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 1caf3520b080e8147946ca295820cbb6
+    path: Assets/Scenes/LevelDesign/level4.unity
+    guid: 6189be33ae1fa5548aee6ec94a1812b5
   - enabled: 1
     path: Assets/Scenes/LevelDesign/level3.unity
     guid: 4ba71e453b21ceb4583db83c53c234b6
