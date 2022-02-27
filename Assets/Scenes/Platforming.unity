@@ -663,10 +663,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085083e6c3b54b75b2c5487b4481f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 1
-  jumpForce: 1
+
+  moveForce: 20
+  jumpForce: 5
   maximumDim: 10
-  shapeshiftSpeed: 1
+  shapeshiftSpeed: 0.2
+
   t: 1
 --- !u!1 &2017698980
 GameObject:
@@ -718,8 +720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70071f801437d46bf8c90769abc82c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minutes: 10
-  seconds: 10
+
+  minutes: 5
+  seconds: 0
+
 --- !u!114 &2017698983
 MonoBehaviour:
   m_ObjectHideFlags: 0
