@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     public float maximumDim = 10f;
     public float shapeshiftSpeed;
 
+    public AudioSource jumpAudio, shapeshiftAudio, deathAudio;
+
     Rigidbody rb;
 
     Collider ground = null;
@@ -36,13 +38,17 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(Vector3.right * Input.GetAxis("Horizontal") * moveForce * shapeLength);
 
         if (Input.GetButton("Vertical") && ground != null)
+        {
             rb.AddForce(Vector3.up * jumpForce * (4f * Mathf.Exp(-shapeLength) * (1f - Mathf.Exp(-shapeLength))), ForceMode.Impulse);
+            jumpAudio.Play();
+        }
 
         if (Input.GetAxis("Shapeshift") != 0f)
         {
-            //TODO shapeshift audio perhaps?
             t = Mathf.Clamp(t + Input.GetAxis("Shapeshift") * shapeshiftSpeed, -maximumDim, maximumDim);
             transform.localScale = new Vector3(shapeLength, 1f / shapeLength);
+            if(!shapeshiftAudio.isPlaying)
+                shapeshiftAudio.Play();
         }
     }
 
