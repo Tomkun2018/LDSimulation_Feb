@@ -42,17 +42,20 @@ public class PlayerMove : MonoBehaviour
         {
             //TODO shapeshift audio perhaps?
             t = Mathf.Clamp(t + Input.GetAxis("Shapeshift") * shapeshiftSpeed, -maximumDim, maximumDim);
-            transform.localScale = new Vector3(shapeLength, 1f / shapeLength);
+
+            transform.localScale = new Vector3(shapeLength, 1f / shapeLength, 1);
         }
     }
 
-   
+  
+
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.contactCount > 0 && collision.GetContact(0).point.y < rb.position.y)
             ground = collision.gameObject.GetComponent<Collider>();
     }
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.Equals(ground))

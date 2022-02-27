@@ -297,8 +297,10 @@ InputManager:
     m_Name: Shapeshift
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: n
-    positiveButton: m
+
+    negativeButton: m
+    positiveButton: n
+
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000
