@@ -45,6 +45,7 @@ public class PlayerMove : MonoBehaviour
 
             transform.localScale = new Vector3(shapeLength, 1f / shapeLength, 1);
         }
+       
     }
 
   

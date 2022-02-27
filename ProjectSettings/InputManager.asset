@@ -13,7 +13,7 @@ InputManager:
     positiveButton: right
     altNegativeButton: a
     altPositiveButton: d
-    gravity: 3
+    gravity: 1000
     dead: 0.001
     sensitivity: 3
     snap: 1
@@ -297,15 +297,13 @@ InputManager:
     m_Name: Shapeshift
     descriptiveName: 
     descriptiveNegativeName: 
-
-    negativeButton: m
-    positiveButton: n
-
+    negativeButton: n
+    positiveButton: m
     altNegativeButton: 
-    altPositiveButton: joystick button 1
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 0.1
     snap: 0
     invert: 0
     type: 0
