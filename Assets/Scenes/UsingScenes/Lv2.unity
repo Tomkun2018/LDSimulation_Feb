@@ -876,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 1129111297}
   timer: {fileID: 0}
-  number: 7
+  number: 8
 --- !u!1 &853062356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,8 +1352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085083e6c3b54b75b2c5487b4481f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 25
-  jumpForce: 5
+  moveForce: 20
+  jumpForce: 4
   maximumDim: 5
   shapeshiftSpeed: 1
   t: 0
