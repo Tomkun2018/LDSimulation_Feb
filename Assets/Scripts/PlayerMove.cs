@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public float shapeshiftSpeed;
 
     Rigidbody rb;
+    AudioSource audioS;
 
     Collider ground = null;
 
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioS = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -35,8 +37,11 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0f)
             rb.AddForce(Vector3.right * Input.GetAxis("Horizontal") * moveForce * shapeLength);
 
-        if (Input.GetButton("Vertical") && ground != null)
+        if (Input.GetButton("Vertical") && ground != null) {
             rb.AddForce(Vector3.up * jumpForce * (4f * Mathf.Exp(-shapeLength) * (1f - Mathf.Exp(-shapeLength))), ForceMode.Impulse);
+            audioS.Play();
+        }
+           
 
         if (Input.GetAxis("Shapeshift") != 0f)
         {
